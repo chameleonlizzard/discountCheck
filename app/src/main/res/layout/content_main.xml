@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="nl.cantstop.discountcheck.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="€ 0"
+        android:layout_alignParentTop="true"
+        android:id="@+id/finalPrice"
+        android:textIsSelectable="false"
+        android:textSize="70dp"
+        android:textAlignment="center"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentBottom="false"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/prizeEditText"
+        android:layout_below="@+id/finalPrice"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:hint="Vul de prijs in"
+        android:textSize="25dp" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/discountEditText"
+        android:layout_below="@+id/prizeEditText"
+        android:layout_alignStart="@+id/prizeEditText"
+        android:hint="Vul de korting in"
+        android:textSize="25dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Berekenen"
+        android:id="@+id/calcBtn"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/discountEditText"
+        android:layout_alignEnd="@+id/discountEditText"
+        android:layout_alignStart="@+id/discountEditText"
+        android:textSize="20dp"
+        android:background="@android:color/holo_green_light"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="€"
+        android:id="@+id/euroLabel"
+        android:padding="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBaseline="@+id/prizeEditText"
+        android:layout_alignRight="@+id/prizeEditText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="%"
+        android:id="@+id/textView"
+        android:padding="5dp"
+        android:textSize="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBaseline="@+id/discountEditText"
+        android:layout_alignRight="@+id/discountEditText" />
+</RelativeLayout>
